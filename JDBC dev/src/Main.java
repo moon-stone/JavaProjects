@@ -21,6 +21,12 @@ public class Main {
             String updateQuery = String.format("Update students set marks = %f where id = %d", 89.5, 1);
             updateTable(statement, updateQuery);
             showEntriesInTable(statement, selectQuery);
+            String insertQuery = String.format("Insert into students(name, age, marks) values ('%s', %d, %f)","kiran", 25, 65.2);
+            updateTable(statement, insertQuery);
+            showEntriesInTable(statement, selectQuery);
+            String deleteQuery = String.format("Delete from students where id > %d", 2);
+            updateTable(statement, deleteQuery);
+            showEntriesInTable(statement, selectQuery);
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
